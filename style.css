@@ -165,6 +165,15 @@ body {
     align-items: center;
 }
 
+.footer {
+    display: block;
+    text-align: center;
+}
+
+.footer button{
+    margin-bottom: 50px;
+}
+
 @media (max-width: 853px) {
     .logo img {
         width: 80px;

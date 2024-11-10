@@ -1,48 +1,46 @@
-
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Noto Sans JP", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 :root {
-    --cor0: #34353A; 
+    --cor0: #34353A;
     --cor1: #FFC96B;
-    --cor2: white;   
+    --cor2: white;
     --cor3: #818181;
 }
 
 body {
-    min-height: 100vh;
     background-color: var(--cor0);
     color: var(--cor2);
 }
 
-.header{
+.header {
     height: 150px;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
-.logo{
+.logo {
     flex-grow: 1;
     padding: 0 0 0 10px;
-    
+
 }
 
 .logo img {
     width: 100px;
     margin-left: 150px;
-    
+
 }
 
-.navbar a{
+.navbar a {
     text-decoration: none;
     font-size: 1.5rem;
     margin: 0 20px;
@@ -60,18 +58,19 @@ body {
     color: var(--cor3);
     cursor: pointer;
     display: none;
-    
+
 }
 
 .destaque {
-    font-family: "Poppins", sans-serif;
+    font-family: "Pacifico", cursive;
     font-size: 50px;
+    line-height:1.1;
     color: var(--cor1);
 }
 
 .botao {
     padding: 10px 20px 10px 20px;
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 1.5rem;
     background-color: transparent;
     border: solid var(--cor1);
@@ -96,23 +95,82 @@ body {
 
 }
 
+.home img {
+    opacity: 32%;
 
-.sobre{
-    width: 100%;
-    height: 500px;
-    background-color: aquamarine;
 }
 
 
+.sobre {
+    display: flex;
+    flex-direction: column;
+    padding: 0 200px;
+    width: 100%;
+    height: 100%;
+}
 
+.sobre h2 {
+    font-size: 50px;
+    color: var(--cor2);
+}
+
+.sobre .p {
+    text-align: justify;
+    display: flex;
+    gap: 5px;
+}
+
+#linha {
+    color: var(--cor1);
+    margin-top: -9px;
+}
+
+.skills h2{
+    margin-top: 30px;
+    font-size: 2.5rem;
+}
+
+.skills {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    
+}
+
+.container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 15px;
+   margin-bottom: 100px;
+
+}
+
+.container img {
+    width: 60px;
+    height: auto;
+}
+
+.container .imagens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    background-color: #4b4b4b;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+}
 
 @media (max-width: 853px) {
     .logo img {
         width: 80px;
-        margin-left: 140px;        
+        margin-left: 140px;
     }
 
-    .icons{
+    .icons {
         display: inline-flex;
     }
 
@@ -128,6 +186,10 @@ body {
         display: block;
     }
 
+    .botao {
+        padding: 10px 10px 10px 10px;
+        font-size: 1.2rem;
+    }
 
     .navbar {
         position: absolute;
@@ -137,14 +199,14 @@ body {
         height: 0;
         overflow: hidden;
         transition: .3s ease;
-        
+
     }
 
     #check:checked~.navbar {
         height: 17.7rem;
     }
 
-  
+
     .navbar a {
         display: block;
         margin: 1.3rem;
@@ -158,26 +220,54 @@ body {
         transform: translateY(0);
     }
 
-    .home .texto{
+    .home .texto {
         height: 400px;
         transform: translateX(190px);
         text-align: start;
         padding-left: 10px;
         z-index: 100;
-       
     }
 
-    .home img{
-        transform:translateX(80px);
+    .home img {
+        transform: translateX(80px);
     }
+
+    .sobre {
+        padding: 0 30px;
+        width: 90%;
+    }
+    
 
 }
 
 @media (max-width: 540px) {
-    .home .texto{
+    .home .texto {
         transform: translateX(250px);
     }
-    .home img{ 
-        transform:translateX(40px);
+
+    .home img {
+        transform: translateX(40px);
     }
+    .botao {
+        padding: 3px 30px 3px 30px;
+        margin-top: 40px;
+        font-size: 1.3rem;
+    }
+    .sobre {
+        margin-top: 50px;
+        padding: 0 30px;
+        width: 90%;
+    }
+
+    .destaque {
+        line-height: 1.3;
+    }
+
+    .botao {
+        padding: 10px 10px 10px 10px;
+        font-size: 1.3 rem;
+    }
+    
+  
+
 }

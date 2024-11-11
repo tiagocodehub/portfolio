@@ -39,6 +39,10 @@ body {
     background-color: rgb(235, 235, 235);
 }
 
+.white-mode .sobre h2 {
+    color: var(--cor0);
+} 
+
 /* Container do botão toggle */
 .toggle-container {
     position: absolute;

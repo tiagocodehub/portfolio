@@ -19,6 +19,71 @@
 body {
     background-color: var(--cor0);
     color: var(--cor2);
+    transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+.white-mode {
+    background-color: var(--cor2);
+    color: var(--cor0);
+}
+
+.white-mode .navbar a {
+    color: var(--cor0);
+}
+
+.white-mode .botao{
+    color: var(--cor0);
+}
+
+.white-mode .container .imagens {
+    background-color: rgb(235, 235, 235);
+}
+
+/* Container do botão toggle */
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Oculta o checkbox padrão */
+#theme-toggle {
+    display: none;
+}
+
+/* Estilos do botão seletor */
+.toggle-label {
+    width: 50px;
+    height: 26px;
+    background-color: #ddd;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+/* Bolinha interna do toggle */
+.toggle-label::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 3px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos do botão quando ativado */
+#theme-toggle:checked + .toggle-label {
+    background-color: #4caf50;
+}
+
+#theme-toggle:checked + .toggle-label::after {
+    transform: translateX(24px);
 }
 
 .header {
@@ -74,7 +139,7 @@ body {
     font-size: 1.5rem;
     background-color: transparent;
     border: solid var(--cor1);
-    color: aliceblue;
+    color: var(--cor2);
     border-radius: 10px;
 }
 

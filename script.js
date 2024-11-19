@@ -1,6 +1,6 @@
 function toggleTheme() {
     // Alterna entre o modo escuro e claro
-    document.body.classList.toggle('white-mode');
+    document.body.classList.toggle('white-mod');
 }
 
 function changeLanguage(language) {
